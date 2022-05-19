@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useLightSide() {
-  const [theme, setTheme] = useState(localStorage.theme);
+  const [theme, setTheme] = useState("light");
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
@@ -9,7 +9,11 @@ export default function useLightSide() {
     rootElement.classList.remove(colorTheme);
     rootElement.classList.add(theme);
 
-    localStorage.setItem("theme", theme);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    } else {
+      localStorage.removeItem("theme", theme);
+    }
   }, [theme, colorTheme]);
 
   return [colorTheme, setTheme];

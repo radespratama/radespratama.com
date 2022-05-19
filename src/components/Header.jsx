@@ -6,7 +6,7 @@ import Switcher from "./Switcher";
 export default function Header() {
   return (
     <header className="fixed w-full top-0 left-0 bg-gray-950 dark:bg-white">
-      <nav className="container mx-auto py-4 border-b border-gray-800 dark:border-gray-200 grid grid-cols-2 px-4">
+      <nav className="container mx-auto py-4 grid grid-cols-2 px-4">
         <div className="flex items-center justify-start">
           <DevLogo classNames="h-8 w-8 stroke-white dark:stroke-gray-950 mr-3 hidden lg:inline" />
           {HeaderLinks.map(({ id, name, path }) => (

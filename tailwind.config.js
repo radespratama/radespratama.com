@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [],
   darkMode: "class",
@@ -12,7 +13,7 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1140px",
+      xl: "1100px",
     },
     colors: ({ colors }) => ({
       transparent: colors.transparent,

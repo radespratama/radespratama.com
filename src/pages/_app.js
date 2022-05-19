@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { DefaultSeo } from "next-seo";
 import NextNProgress from "nextjs-progressbar";
 import "@css/globals.css";
-import SEO, { keyword } from "@config/next-seo.config";
 import Cursor from "@component/Cursor";
 
 function MyApp({ Component, pageProps }) {
@@ -15,10 +13,12 @@ function MyApp({ Component, pageProps }) {
         height={3}
         showOnShallow={true}
       />
-      <DefaultSeo {...SEO} />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content={keyword} />
+        <meta
+          name="keywords"
+          content="frontend developer, ui design, Frontend developer, UI Design, Open-source Software, open-source software, portfolio website, radespratama, putu rades pratama, react js website"
+        />
       </Head>
       <Component {...pageProps} />
       <Cursor />

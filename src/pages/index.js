@@ -1,10 +1,16 @@
 import Layout from "@component/Layout";
-import Hero from "@component/home/Hero";
+import Intro from "@component/Intro";
+import CreativeWork from "@component/CreativeWork";
+import KeepInTouch from "@component/KeepInTouch";
+import ViewArticles from "@component/ViewArticles";
 
 export default function Home() {
   return (
     <Layout>
-      <Hero />
+      <Intro />
+      <CreativeWork />
+      <ViewArticles />
+      <KeepInTouch />
     </Layout>
   );
 }

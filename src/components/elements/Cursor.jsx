@@ -95,8 +95,8 @@ export default function Cursor() {
         let self = this;
 
         if (self.cursorEnlarged) {
-          self.$dot.style.transform = "translate(-50%, -50%) scale(0.75)";
-          self.$outline.style.transform = "translate(-50%, -50%) scale(1.5)";
+          self.$dot.style.transform = "translate(-50%, -50%) scale(0.85)";
+          self.$outline.style.transform = "translate(-50%, -50%) scale(1.2)";
         } else {
           self.$dot.style.transform = "translate(-50%, -50%) scale(1)";
           self.$outline.style.transform = "translate(-50%, -50%) scale(1)";

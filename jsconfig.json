@@ -7,7 +7,8 @@
       "@hook/*": ["./src/hooks/*"],
       "@lib/*": ["./src/lib/*"],
       "@pages/*": ["./src/pages/*"],
-      "@config/*": ["./src/config/*"]
+      "@config/*": ["./src/config/*"],
+      "@anims/*": ["./src/anims/*"]
     }
   },
   "exclude": [".next", "node_modules"]

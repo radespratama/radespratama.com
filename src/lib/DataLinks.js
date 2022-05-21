@@ -1,4 +1,10 @@
-import { InstagramLogo, LinkedinLogo, TwitterLogo } from "@component/DevIcon";
+import {
+  DocumentIcon,
+  EmailIcon,
+  InstagramLogo,
+  LinkedinLogo,
+  TwitterLogo,
+} from "@component/elements/Icon";
 
 export const HeaderLinks = [
   { id: 1, name: "Home", path: "/" },
@@ -10,7 +16,6 @@ export const HeaderLinks = [
 export const HeroLinks = [
   {
     id: 1,
-    name: "Instagram",
     path: "https://www.instagram.com/radespratamaa",
     icon: (
       <InstagramLogo classNames="h-6 w-6 fill-gray-400 dark:fill-gray-500 hover:fill-white" />
@@ -18,7 +23,6 @@ export const HeroLinks = [
   },
   {
     id: 2,
-    name: "Twitter",
     path: "https://twitter.com/radespratamaa",
     icon: (
       <TwitterLogo classNames="h-6 w-6 fill-gray-400 dark:fill-gray-500 hover:fill-white" />
@@ -26,10 +30,30 @@ export const HeroLinks = [
   },
   {
     id: 3,
-    name: "LinkedIn",
     path: "https://www.linkedin.com/in/radespratama",
     icon: (
       <LinkedinLogo classNames="h-6 w-6 fill-gray-400 dark:fill-gray-500 hover:fill-white" />
     ),
+  },
+];
+
+export const KeepInTouchLink = [
+  {
+    id: 1,
+    name: "LinkedIn",
+    path: "https://www.linkedin.com/in/radespratama",
+    icon: <LinkedinLogo classNames="h-5 w-5 fill-white" />,
+  },
+  {
+    id: 2,
+    name: "Email",
+    path: "mailto:radespratamaa@gmail.com",
+    icon: <EmailIcon classNames="h-5 w-5 fill-white" />,
+  },
+  {
+    id: 3,
+    name: "Resume",
+    path: "",
+    icon: <DocumentIcon classNames="h-5 w-5 fill-white" />,
   },
 ];

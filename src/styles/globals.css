@@ -23,29 +23,30 @@
     font-size: clamp(2.375rem, 4vw + 1rem, 3.75rem);
     line-height: 1.2;
   }
+  .text-5xl-rsv {
+    font-size: clamp(2.813rem, 3vw + 1rem, 3rem);
+    line-height: 1.2;
+  }
+  .cursor-silence {
+    cursor: none !important;
+  }
   .text-lg-rsv {
-    font-size: clamp(1.125rem, 3vw + 1rem, 1.125rem);;
+    font-size: clamp(1.125rem, 3vw + 1rem, 1.125rem);
     line-height: 1.5;
   }
   .text-base-rsv {
     font-size: clamp(0.714rem, 2vw + 1rem, 1rem);
     line-height: 1.5;
   }
-  .text-style {
-    background-image: linear-gradient(120deg, #00a8ff 0%, #42C2FF 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.45em;
-    background-position: 0 88%;
-    transition: all 0.25s ease-in;
+  .call-to {
+    @apply my-5 flex cursor-pointer max-w-fit items-center gap-1 font-medium text-base text-white dark:text-gray-950 duration-100 hover:ml-2;
   }
-  .text-style:hover {
-    cursor: default;
-    background-size: 100% 1.25em;
-    background-position: 0 80%;
+  .btn-dknfg {
+    @apply px-5 py-2 inline-flex items-center justify-center rounded-md bg-gray-900 transition-all duration-200 hover:bg-gray-800 focus:outline outline-gray-700;
   }
   .cd {
     @apply hidden lg:inline pointer-events-none absolute top-1/2 left-1/2 rounded-full opacity-0
-    w-2 h-2 bg-white dark:bg-gray-950 z-[9999];
+    w-3 h-3 bg-white dark:bg-gray-950 z-[9999];
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }

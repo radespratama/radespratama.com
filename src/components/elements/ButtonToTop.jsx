@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronTop } from "./DevIcon";
+import { ChevronTop } from "./Icon";
 
 const BackToTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -19,7 +19,9 @@ const BackToTop = () => {
     <AnimatePresence>
       {showButton && (
         <motion.div
-          className="flex justify-center items-center p-5 bottom-8 right-8 text-xl rounded-full cursor-pointer bg-gray-950 text-gray-100 dark:bg-gray-100 dark:text-gray-900 fixed"
+          className="flex justify-center items-center p-3 lg:p-4 bottom-10 right-10 text-xl 
+          rounded-full cursor-silence bg-white dark:bg-gray-950 text-gray-100 
+          dark:text-gray-900 fixed"
           onClick={() => {
             window.scrollTo({
               top: 0,
@@ -32,7 +34,7 @@ const BackToTop = () => {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
         >
-          <ChevronTop classNames="h-4 w-4 stroke-gray-950" />
+          <ChevronTop classNames="h-7 w-7 stroke-gray-950 dark:stroke-white" />
         </motion.div>
       )}
     </AnimatePresence>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import BackToTop from "./BackToTop";
+import ButtonToTop from "./elements/ButtonToTop";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -9,9 +9,8 @@ export const meta = {
   title: "Rades Pratama - Software Developer",
   description:
     "Seseorang yang menyebut dirinya sebagai Software Developer, tertarik di bidang frontend dan mengerti soal UI Design—yang mana sekarang sedang senang ber-eksplorasi dengan Open-source Software.",
-  image: "/banner.png",
+  image: "/static/images/Banner.png",
   type: "website",
-  keyword: "frontend, Frontend developer, Open-source Software, portfolio website, radespratama, putu rades pratama"
 };
 
 export default function Layout({ children, title, description, image }) {
@@ -22,7 +21,7 @@ export default function Layout({ children, title, description, image }) {
         <title>{title ?? meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={description ?? meta.description} name="description" />
-        <meta content={meta.keyword} name="keyword" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:url" content={`${meta.root}${router.asPath}`} />
         <link rel="canonical" href={`${meta.root}${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
@@ -49,7 +48,7 @@ export default function Layout({ children, title, description, image }) {
       <Header />
       <main className="flex-wrap flex-grow min-h-screen px-2">{children}</main>
       <Footer />
-      <BackToTop />
+      <ButtonToTop />
     </>
   );
 }

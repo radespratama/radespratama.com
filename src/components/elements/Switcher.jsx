@@ -18,7 +18,7 @@ export default function Switcher() {
       <DarkModeSwitch
         checked={lightSide}
         onChange={togglerTheme}
-        className="h-6 w-6"
+        className="h-6 w-6 cursor-silence"
         color={lightSide ? "black" : "white"}
         moonColor={lightSide ? "black" : "white"}
         sunColor={lightSide ? "black" : "white"}

@@ -5,10 +5,7 @@
       "@css/*": ["./src/styles/*"],
       "@component/*": ["./src/components/*"],
       "@hook/*": ["./src/hooks/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@config/*": ["./src/config/*"],
-      "@anims/*": ["./src/anims/*"]
+      "@lib/*": ["src/lib/*"]
     }
   },
   "exclude": [".next", "node_modules"]

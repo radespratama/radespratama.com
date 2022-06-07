@@ -3,7 +3,7 @@ export const FadeContainer = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 1.2,
+      delayChildren: 1.6,
       staggerChildren: 0.3,
     },
   },
@@ -26,26 +26,7 @@ export const LanguageMenu = {
   },
 };
 
-export const FastFadeContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 0,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 export const Fade = {
-  hidden: { y: -40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
-export const TopicsFade = {
   hidden: { y: -40, opacity: 0 },
   visible: {
     y: 0,
@@ -77,7 +58,7 @@ export const Image = {
       type: "spring",
       stiffness: 260,
       damping: 15,
-      delay: 0.9,
+      delay: 1.4,
     },
   },
 };

@@ -1,8 +1,11 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import ButtonToTop from "./elements/ButtonToTop";
-import Footer from "./Footer";
-import Header from "./Header";
+
+const DynamicHeader = dynamic(() => import("./Header"));
+const DynamicFooter = dynamic(() => import("./Footer"));
+const DynamicCustomCursor = dynamic(() => import("@component/Cursor"), { ssr: false });
+const DynamicBackToTop = dynamic(() => import("@component/BackToTop"), { ssr: false });
 
 export const meta = {
   root: "https://radespratama.xyz",
@@ -13,7 +16,9 @@ export const meta = {
   type: "website",
 };
 
-export default function Layout({ children, title, description, image }) {
+export default function Layout({
+  title, description, children, isHeader, isFooter,
+}) {
   const router = useRouter();
   return (
     <>
@@ -25,30 +30,22 @@ export default function Layout({ children, title, description, image }) {
         <meta property="og:url" content={`${meta.root}${router.asPath}`} />
         <link rel="canonical" href={`${meta.root}${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta
-          property="og:site_name"
-          content="Rades Pratama - Software Developer"
-        />
-        <meta
-          property="og:description"
-          content={description ?? meta.description}
-        />
-        <meta property="og:title" content={title ?? meta.title} />
-        <meta property="og:image" content={image ?? meta.image} />
+        <meta property="og:site_name" content="Rades Pratama - Software Developer" />
+        <meta property="og:description" content={description ?? meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@radespratamaa" />
         <meta name="theme-color" content="#111827" />
         <meta name="twitter:title" content={title ?? meta.title} />
-        <meta
-          name="twitter:description"
-          content={description ?? meta.description}
-        />
-        <meta name="twitter:image" content={image ?? meta.image} />
+        <meta name="twitter:description" content={description ?? meta.description} />
+        <meta name="twitter:image" content={meta.image} />
       </Head>
-      <Header />
-      <main className="flex-wrap flex-grow min-h-screen px-2">{children}</main>
-      <Footer />
-      <ButtonToTop />
+      <DynamicHeader isHeader={isHeader} />
+      <main className="flex-wrap flex-grow min-h-screen">{children}</main>
+      <DynamicFooter isFooter={isFooter} />
+      <DynamicCustomCursor />
+      <DynamicBackToTop />
     </>
   );
 }

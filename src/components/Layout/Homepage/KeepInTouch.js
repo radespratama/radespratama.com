@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { KeepInTouchLink } from "@lib/DataLinks";
-import * as A from "@anims/Animation";
+import { KeepInTouchLink } from "@lib/utils/DataLinks";
 
 export default function KeepInTouch() {
   const { ref, inView } = useInView({
@@ -39,10 +38,8 @@ export default function KeepInTouch() {
         className="my-6 max-w-md mx-auto text-base-rsv text-center"
       >
         I&apos;m currently specializing in{" "}
-        <span className="text-green-500 dark:text-sky-500">
-          Front-end Development
-        </span>{" "}
-        Feel free to get in touch and talk more about your projects.
+        <span className="text-green-500 dark:text-sky-500">Front-end Development</span> Feel free to
+        get in touch and talk more about your projects.
       </motion.p>
       <motion.div
         initial={{ y: -30, opacity: 0 }}
@@ -50,16 +47,16 @@ export default function KeepInTouch() {
         animate={animation}
         className="max-w-md grid grid-cols-12 gap-4"
       >
-        {KeepInTouchLink.map(({ id, name, path, icon }) => (
+        {KeepInTouchLink.map((link) => (
           <a
-            key={id}
+            key={link.id}
             className="col-span-4 btn-dknfg dark:text-white"
-            href={path}
+            href={link.path}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="hidden md:inline mr-2">{icon}</span>
-            {name}
+            <span className="hidden md:inline mr-2">{link.icon}</span>
+            {link.name}
           </a>
         ))}
       </motion.div>

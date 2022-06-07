@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronTop } from "./Icon";
 
-const BackToTop = () => {
+function BackToTop() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -19,8 +19,8 @@ const BackToTop = () => {
     <AnimatePresence>
       {showButton && (
         <motion.div
-          className="flex justify-center items-center p-3 lg:p-4 bottom-10 right-10 text-xl 
-          rounded-full cursor-silence bg-white dark:bg-gray-950 text-gray-100 
+          className="flex justify-center items-center p-3 lg:p-4 bottom-10 right-10 text-xl
+          rounded-full cursor-silence bg-white dark:bg-gray-950 text-gray-100
           dark:text-gray-900 fixed"
           onClick={() => {
             window.scrollTo({
@@ -39,6 +39,6 @@ const BackToTop = () => {
       )}
     </AnimatePresence>
   );
-};
+}
 
 export default BackToTop;

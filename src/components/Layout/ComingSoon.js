@@ -10,7 +10,6 @@ export default function ComingSoon({ pages }) {
       className="min-h-screen flex flex-col items-center justify-center"
     >
       Page {pages} coming soon 🗿
-
       <Link href="/">
         <a className="my-4 hover:underline">Back to home</a>
       </Link>

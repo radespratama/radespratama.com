@@ -1,7 +1,7 @@
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
+
 import "@css/globals.css";
-import Cursor from "@component/elements/Cursor";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         startPosition={0.3}
         stopDelayMs={200}
         height={3}
-        showOnShallow={true}
+        showOnShallow
       />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-      <Cursor />
     </>
   );
 }

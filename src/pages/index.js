@@ -1,12 +1,11 @@
-import Layout from "@component/Layout";
-import Intro from "@component/Intro";
-import CreativeWork from "@component/CreativeWork";
-import KeepInTouch from "@component/KeepInTouch";
-import ViewArticles from "@component/ViewArticles";
+import Layout from "@component/Layout/Layout";
+import {
+  Intro, CreativeWork, ViewArticles, KeepInTouch,
+} from "@component/Layout/Homepage";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout isHeader isFooter>
       <Intro />
       <CreativeWork />
       <ViewArticles />

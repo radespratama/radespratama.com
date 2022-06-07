@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect } from "react";
 
 export default function Cursor() {
@@ -13,7 +14,7 @@ export default function Cursor() {
       $dot: document.querySelector(".cursor-dot"),
       $outline: document.querySelector(".cursor-dot-outline"),
 
-      init: function () {
+      init() {
         this.dotSize = this.$dot.offsetWidth;
         this.outlineSize = this.$outline.offsetWidth;
 
@@ -21,58 +22,58 @@ export default function Cursor() {
         this.animateDotOutline();
       },
 
-      setupEventListeners: function () {
-        let self = this;
+      setupEventListeners() {
+        const self = this;
 
-        document.querySelectorAll("a").forEach(function (el) {
-          el.addEventListener("mouseover", function () {
+        document.querySelectorAll("a").forEach((el) => {
+          el.addEventListener("mouseover", () => {
             self.cursorEnlarged = true;
             self.toggleCursorSize();
           });
-          el.addEventListener("mouseout", function () {
+          el.addEventListener("mouseout", () => {
             self.cursorEnlarged = false;
             self.toggleCursorSize();
           });
         });
 
-        document.querySelectorAll("button").forEach(function (el) {
-          el.addEventListener("mouseover", function () {
+        document.querySelectorAll("button").forEach((el) => {
+          el.addEventListener("mouseover", () => {
             self.cursorEnlarged = true;
             self.toggleCursorSize();
           });
-          el.addEventListener("mouseout", function () {
+          el.addEventListener("mouseout", () => {
             self.cursorEnlarged = false;
             self.toggleCursorSize();
           });
         });
 
-        document.addEventListener("mousedown", function () {
+        document.addEventListener("mousedown", () => {
           self.cursorEnlarged = true;
           self.toggleCursorSize();
         });
-        document.addEventListener("mouseup", function () {
+        document.addEventListener("mouseup", () => {
           self.cursorEnlarged = false;
           self.toggleCursorSize();
         });
 
-        document.addEventListener("mousemove", function (e) {
+        document.addEventListener("mousemove", (e) => {
           self.cursorVisible = true;
           self.toggleCursorVisibility();
 
           self.endX = e.pageX;
           self.endY = e.pageY;
-          self.$dot.style.top = self.endY + "px";
-          self.$dot.style.left = self.endX + "px";
+          self.$dot.style.top = `${self.endY}px`;
+          self.$dot.style.left = `${self.endX}px`;
         });
 
-        document.addEventListener("mouseenter", function () {
+        document.addEventListener("mouseenter", () => {
           self.cursorVisible = true;
           self.toggleCursorVisibility();
           self.$dot.style.opacity = 1;
           self.$outline.style.opacity = 1;
         });
 
-        document.addEventListener("mouseleave", function () {
+        document.addEventListener("mouseleave", () => {
           self.cursorVisible = true;
           self.toggleCursorVisibility();
           self.$dot.style.opacity = 0;
@@ -80,19 +81,19 @@ export default function Cursor() {
         });
       },
 
-      animateDotOutline: function () {
-        let self = this;
+      animateDotOutline() {
+        const self = this;
 
         self._x += (self.endX - self._x) / self.delay;
         self._y += (self.endY - self._y) / self.delay;
-        self.$outline.style.top = self._y + "px";
-        self.$outline.style.left = self._x + "px";
+        self.$outline.style.top = `${self._y}px`;
+        self.$outline.style.left = `${self._x}px`;
 
         requestAnimationFrame(this.animateDotOutline.bind(self));
       },
 
-      toggleCursorSize: function () {
-        let self = this;
+      toggleCursorSize() {
+        const self = this;
 
         if (self.cursorEnlarged) {
           self.$dot.style.transform = "translate(-50%, -50%) scale(0.85)";
@@ -103,8 +104,8 @@ export default function Cursor() {
         }
       },
 
-      toggleCursorVisibility: function () {
-        let self = this;
+      toggleCursorVisibility() {
+        const self = this;
 
         if (self.cursorVisible) {
           self.$dot.style.opacity = 1;
@@ -120,8 +121,8 @@ export default function Cursor() {
   }, []);
   return (
     <>
-      <div className="cdo cursor-dot-outline"></div>
-      <div className="cd cursor-dot"></div>
+      <div className="cdo cursor-dot-outline" />
+      <div className="cd cursor-dot" />
     </>
   );
 }

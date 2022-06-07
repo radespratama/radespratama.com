@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import * as A from "@anims/Animation";
-import { HeroLinks } from "@lib/DataLinks";
-import ImageReus from "@component/elements/ImageReus";
-import { ArrowRight } from "./elements/Icon";
+import * as A from "@lib/animation";
+import { SocialLinks } from "@lib/utils/DataLinks";
+import ImageReus from "@component/ImageReus";
+import { ArrowRight } from "@component/Icon";
 
-const Social = () => {
+function Social() {
   return (
     <motion.div
       className="mt-8 flex space-x-7"
@@ -13,13 +13,13 @@ const Social = () => {
       initial="hidden"
       animate="visible"
     >
-      {HeroLinks.map(({ id, path, icon }) => (
+      {SocialLinks.map(({ id, path, icon }) => (
         <Link key={id} href={path} passHref>
           <motion.a
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.8 }}
             whileTap={{ scale: 0.8 }}
             variants={A.Fade}
-            className="ease"
+            className="ease fill-gray-400"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -29,7 +29,7 @@ const Social = () => {
       ))}
     </motion.div>
   );
-};
+}
 
 export default function Hero() {
   return (
@@ -57,8 +57,8 @@ export default function Hero() {
           variants={A.DefaultAnimate}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.8, duration: 0.3 }}
-          className="text-lg-rsv tracking-normal font-medium mb-5 lg:mb-7"
+          transition={{ delay: 0.9, duration: 0.3 }}
+          className="text-lg-rsv tracking-normal font-medium mb-5 lg:mb-6"
         >
           Software Developer, Blogger and a Student.
         </motion.p>
@@ -66,11 +66,10 @@ export default function Hero() {
           variants={A.DefaultAnimate}
           initial="hidden"
           animate="visible"
-          transition={{ delay: 0.9, duration: 0.3 }}
+          transition={{ delay: 1.2, duration: 0.3 }}
           className="text-base-rsv text-left tracking-tight max-w-lg font-medium text-gray-400 dark:text-gray-500"
         >
-          ⚡ Building Web apps. Creating a tutorial web
-          components in{" "}
+          ⚡ Building Web apps. Creating a tutorial web components in{" "}
           <a
             href="https://www.instagram.com/devplayhouse/"
             className="underline hover:text-white dark:hover:text-gray-950"
@@ -79,15 +78,14 @@ export default function Hero() {
           >
             IG.
           </a>{" "}
-          Likes exploring open source software and Writing articles on my blog
-          sometimes.
+          Likes exploring open source software and Writing articles on my blog sometimes.
         </motion.p>
         <Link href="/blog">
           <motion.a
             variants={A.DefaultAnimate}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1, duration: 0.3 }}
+            transition={{ delay: 1.4, duration: 0.3 }}
             className="call-to cursor-silence"
           >
             Read my Blog
@@ -102,7 +100,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.3 }}
-        className="w-1/4 hidden sm:inline"
+        className="w-1/4 hidden sm:flex justify-center mt-[50px]"
       >
         <ImageReus
           src="/static/images/profile-me.webp"

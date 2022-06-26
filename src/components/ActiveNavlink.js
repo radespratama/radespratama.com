@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 function ActiveLink({ router, href, children }) {
   (function preFetchPages() {
     if (typeof window !== "undefined") router.prefetch(router.pathname);
-  }());
+  })();
 
   const handleClick = (e) => {
     e.preventDefault();

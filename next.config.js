@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
-  swcMinify: true,
+  swcMinify: false,
 };
 
 module.exports = nextConfig;

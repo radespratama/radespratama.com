@@ -1,6 +1,4 @@
-import {
-  DocumentIcon, EmailIcon, InstagramLogo, LinkedinLogo, TwitterLogo,
-} from "@component/Icon";
+import { DocumentIcon, EmailIcon, InstagramLogo, LinkedinLogo, TwitterLogo } from "@component/Icon";
 
 const HeaderLinks = [
   { id: 1, name: "Home", path: "/" },

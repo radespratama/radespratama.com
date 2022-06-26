@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 
 const DynamicHeader = dynamic(() => import("./Header"));
 const DynamicFooter = dynamic(() => import("./Footer"));
-const DynamicCustomCursor = dynamic(() => import("@component/Cursor"), { ssr: false });
-const DynamicBackToTop = dynamic(() => import("@component/BackToTop"), { ssr: false });
 
 export const meta = {
   root: "https://radespratama.xyz",
@@ -16,9 +14,7 @@ export const meta = {
   type: "website",
 };
 
-export default function Layout({
-  title, description, children, isHeader, isFooter,
-}) {
+export default function Layout({ title, description, children, isHeader, isFooter }) {
   const router = useRouter();
   return (
     <>
@@ -44,8 +40,6 @@ export default function Layout({
       <DynamicHeader isHeader={isHeader} />
       <main className="flex-wrap flex-grow min-h-screen">{children}</main>
       <DynamicFooter isFooter={isFooter} />
-      <DynamicCustomCursor />
-      <DynamicBackToTop />
     </>
   );
 }

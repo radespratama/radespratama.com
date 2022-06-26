@@ -4,8 +4,9 @@
     "paths": {
       "@css/*": ["./src/styles/*"],
       "@component/*": ["./src/components/*"],
-      "@hook/*": ["./src/hooks/*"],
-      "@lib/*": ["src/lib/*"]
+      "@lib/*": ["./src/libs/*"],
+      "@page/*": ["./src/pages/*"],
+      "@layout/*": ["./src/layouts/*"]
     }
   },
   "exclude": [".next", "node_modules"]

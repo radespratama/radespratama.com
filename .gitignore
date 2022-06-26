@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/server/node_modules
 /.pnp
 .pnp.js
 
@@ -18,6 +19,9 @@
 # misc
 .DS_Store
 *.pem
+/server/yarn.lock
+yarn.lock
+package-lock.json
 
 # debug
 npm-debug.log*

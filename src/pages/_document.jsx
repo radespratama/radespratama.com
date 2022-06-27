@@ -24,7 +24,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&family=VT323&display=swap"
             rel="stylesheet"
           />
-          <link href="http://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
+          <link href="https://fonts.cdnfonts.com/css/cascadia-code" rel="stylesheet" />
           <meta name="theme-color" content="#111827" />
         </Head>
         <body className="bg-gray-950 text-white dark:bg-white dark:text-gray-900">

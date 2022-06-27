@@ -1,7 +1,9 @@
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import NextNProgress from 'nextjs-progressbar';
 import '@css/globals.css';
+
+// const DynamicCustomCursor = dynamic(() => import('@component/Cursor'));
+// const DynamicBackToTop = dynamic(() => import('@component/ButtonBackToTop'));
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +16,8 @@ function MyApp({ Component, pageProps }) {
         showOnShallow
       />
       <Component {...pageProps} />
+      {/* <DynamicCustomCursor /> */}
+      {/* <DynamicBackToTop /> */}
     </>
   );
 }

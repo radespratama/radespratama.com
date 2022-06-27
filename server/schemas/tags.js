@@ -1,6 +1,6 @@
 export default {
-  name: 'category',
-  title: 'Category',
+  name: 'tags',
+  title: 'Tags',
   type: 'document',
   fields: [
     {
@@ -8,10 +8,5 @@ export default {
       title: 'Title',
       type: 'string',
     },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    },
   ],
-}
+};

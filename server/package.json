@@ -5,7 +5,7 @@
   "description": "",
   "main": "package.json",
   "author": "Rades Pratama <puturades89@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"

@@ -7,24 +7,11 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "sanity": "cd server && sanity start"
+    "sanity": "cd server && sanity start",
+    "deploy": "cd server && sanity deploy"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "airbnb"
-    ]
-  },
-  "browserslist": [
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@sanity/image-url": "^1.0.1",
-    "@tailwindcss/line-clamp": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.2",
     "framer-motion": "^6.3.11",
     "next": "12.1.4",
     "next-sanity": "^0.5.2",
@@ -37,6 +24,8 @@
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.6",
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.17.0",
     "eslint-config-next": "12.1.6",

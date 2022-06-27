@@ -1,5 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/libs/**/*.{js,ts,jsx,tsx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx}',
+  ],
   presets: [],
   darkMode: 'class',
   theme: {
@@ -174,11 +181,6 @@ module.exports = {
       '3xl': '1.5rem',
       full: '9999px',
     },
-    /*
-    borderSpacing: ({ theme }) => ({
-      ...theme('spacing'),
-    }),
-    */
     borderWidth: {
       DEFAULT: '1px',
       0: '0px',
@@ -328,7 +330,8 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
-      sans: ['Sen'],
+      sans: ['Sen', ...defaultTheme.fontFamily.sans],
+      mono: ['"Cascadia Code"', ...defaultTheme.fontFamily.mono] + '!important',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -905,5 +908,5 @@ module.exports = {
     'active',
     'disabled',
   ],
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/typography')],
 };

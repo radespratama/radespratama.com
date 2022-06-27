@@ -4,12 +4,12 @@
 
 @layer components {
   * {
-    @apply m-0 p-0 box-border scroll-smooth cursor-default lg:cursor-none;
+    @apply m-0 p-0 box-border scroll-smooth;
   }
   html,
   body {
     overflow-x: hidden;
-    font-family: "Sen", sans-serif;
+    font-family: 'Sen', sans-serif;
     scrollbar-width: none;
     user-select: none;
   }
@@ -18,5 +18,43 @@
   }
   ::-webkit-scrollbar {
     display: none;
+  }
+  .cursor-silence {
+    cursor: none !important;
+  }
+  .cd {
+    @apply hidden lg:inline pointer-events-none absolute top-1/2 left-1/2 rounded-full opacity-0
+    w-3 h-3 bg-white dark:bg-gray-950 z-[9999];
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .cdo {
+    @apply hidden lg:inline pointer-events-none absolute top-1/2 left-1/2 rounded-full 
+    opacity-0 w-[60px] h-[60px] border-4 border-white dark:border-gray-950 
+    bg-transparent z-[9999];
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .btn-backtotop {
+    @apply flex justify-center items-center p-3 lg:p-4 bottom-10 right-10 text-xl
+    rounded-full cursor-silence bg-white text-gray-900 fixed;
+  }
+  @media only screen and (pointer: none) {
+    .cd {
+      display: none;
+    }
+  }
+  @media (pointer: none) {
+    .cdo {
+      display: none;
+    }
+  }
+  .header-container {
+    @apply max-w-screen-xl mx-auto px-4 py-4 sm:py-3 grid grid-cols-2 gap-4 border-b border-gray-800 dark:border-gray-200;
+  }
+  .blogs-content-card {
+    @apply block p-3 mb-12 rounded-xl lg:p-4 lg:-mt-[22px] border-t border-transparent 
+    hover:border-gray-700 hover:shadow-lg hover:bg-gray-800 text-white dark:text-gray-900 
+    hover:dark:text-white transition-all duration-200;
   }
 }

@@ -1,5 +1,5 @@
-import React from 'react';
+import Layout from '@component/Layout';
 
 export default function Home() {
-  return <div>Home</div>;
+  return <Layout>lorem*50</Layout>;
 }

@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
@@ -8,30 +8,17 @@ export default {
       title: 'Title',
       type: 'string',
       validation: (Rule) => [
-        Rule.required()
-          .min(10)
-          .error('A title of min. 10 characters is required'),
+        Rule.required().min(3).error('A title of min. 3 characters is required'),
         Rule.max(60).warning('Shorter titles are usually better'),
       ],
-    },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
     },
     {
       name: 'shortDescription',
       title: 'Short description',
       type: 'string',
       validation: (Rule) => [
-        Rule.required()
-          .min(7)
-          .error('A title of min. 7 characters is required'),
-        Rule.max(200).warning('Shorter description are usually better'),
+        Rule.required().min(10).error('A title of min. 10 characters is required'),
+        Rule.max(160).warning('Shorter titles are usually better'),
       ],
     },
     {
@@ -55,17 +42,27 @@ export default {
       of: [{ type: 'reference', to: { type: 'tags' } }],
     },
     {
+      name: 'githubUrl',
+      title: 'Github Url',
+      type: 'string',
+      validation: (Rule) => [
+        Rule.required().min(10).error('A title of min. 10 characters is required'),
+      ],
+    },
+    {
+      name: 'demoUrl',
+      title: 'Demo Url',
+      type: 'string',
+      validation: (Rule) => [
+        Rule.required().min(10).error('A title of min. 10 characters is required'),
+      ],
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
     },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    },
   ],
-
   preview: {
     select: {
       title: 'title',

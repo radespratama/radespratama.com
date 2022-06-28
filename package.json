@@ -30,6 +30,7 @@
     "eslint": "^8.17.0",
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
+    "react-portable-text": "^0.4.3",
     "tailwindcss": "^3.1.3"
   }
 }

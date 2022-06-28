@@ -30,6 +30,7 @@ export default function MetaTags({ title, description, url, image }) {
       <meta name="twitter:title" content={title || meta.title} />
       <meta name="twitter:description" content={description || meta.description} />
       <meta name="twitter:image" content={image || meta.image} />
+
     </Head>
   );
 }

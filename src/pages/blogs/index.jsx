@@ -13,7 +13,7 @@ export default function Blogs({ blogs }) {
       isFooter
       title="Developer Blogs - Rades Pratama"
       description="This is where I share my writings on programming, tutorials, and my experiences."
-      url={`${process.env.BASE_URL}/blogs`}
+      url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs`}
     >
       <Intro blogs={blogs} />
     </Layout>

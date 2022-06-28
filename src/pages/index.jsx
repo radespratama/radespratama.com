@@ -1,5 +1,10 @@
 import Layout from '@component/Layout';
+import Intro from '@layout/HomePage/Intro';
 
 export default function Home() {
-  return <Layout>lorem*50</Layout>;
+  return (
+    <Layout isHeader isFooter>
+      <Intro />
+    </Layout>
+  );
 }

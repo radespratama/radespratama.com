@@ -50,7 +50,7 @@
     }
   }
   .header-container {
-    @apply max-w-screen-xl mx-auto px-4 py-4 sm:py-3 grid grid-cols-2 gap-4 border-b border-gray-800 dark:border-gray-200;
+    @apply mx-auto px-4 py-3 grid grid-cols-2 gap-4 border-b border-gray-800 dark:border-gray-200;
   }
   .blogs-content-card {
     @apply block p-3 mb-12 rounded-xl lg:p-4 lg:-mt-[22px] border-t border-transparent 

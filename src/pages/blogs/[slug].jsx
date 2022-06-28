@@ -4,17 +4,17 @@ import Layout from '@component/Layout';
 
 import { sanityClient } from '@lib/config/sanity.config';
 import { queryFetchSlug, queryFetchBlogDynamic } from '@lib/query';
+import DetailBlogs from '@layout/BlogPage/DetailBlogs';
 
 export default function DetailBlog({ blogs }) {
   return (
     <Layout
-      isHeader
       isFooter
       title={`Developer Blogs - ${blogs.title}`}
-      description={blogs.description}
-      url={`${process.env.NEXT_PUBLIC_URL}/blogs/${blogs.slug}`}
+      description={blogs.shortDescription}
+      url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${blogs.slug.current}`}
     >
-      <p>{blogs.slug.current}</p>
+      <DetailBlogs blogs={blogs} />
     </Layout>
   );
 }

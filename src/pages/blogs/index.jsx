@@ -20,7 +20,12 @@ export default function Blogs({ blogs }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({ res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=150, stale-while-revalidate=300'
+  );
+
   const blogs = await sanityClient.fetch(queryFetchBlog);
 
   return {

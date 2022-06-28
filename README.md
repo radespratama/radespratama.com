@@ -48,8 +48,8 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 
 `pages/index.js` = Homepage  
 `pages/projects/index.js` = Projects archive page `[Coming Soon]`  
-`pages/blog/index.js` = Blog listings page `[Coming Soon]`  
-`pages/blog/[slug].js` = Blog post page `[Coming Soon]`
+`pages/blog/index.js` = Blog listings page  
+`pages/blog/[slug].js` = Blog post page
 
 <br/>
 

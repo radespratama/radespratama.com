@@ -21,7 +21,7 @@ export default function Intro({ blogs }) {
       <section className="flex flex-col items-center">
         <div className="text-center border-b border-gray-800 dark:border-gray-200 mb-10 lg:mb-14">
           <h2 className="text-3xl font-bold tracking-tight">Hi, Blogs</h2>
-          <p className="text-base font-medium text-gray-400 pt-1 pb-5">
+          <p className="text-sm md:text-base font-medium text-gray-400 pt-1 pb-5">
             You can see and read all my writings below.
           </p>
         </div>

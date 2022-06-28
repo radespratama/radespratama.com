@@ -8,9 +8,9 @@ export default function Footer({ isFooter }) {
         <div className="px-4 py-3 text-center">
           <h3 className="max-w-[21.875rem] mx-auto font-medium text-sm tracking-tight text-white dark:text-gray-950">
             Designed and Developed by Rades Pratama. Built with{" "}
-            <A href="https://nextjs.org" classNames="text-sky-500 hover:underline">Next JS</A> &{" "}
-            <A href="https://tailwindcss.com" classNames="text-sky-500 hover:underline">Tailwind CSS</A> Hosted on{" "}
-            <A href="https://vercel.com" classNames="text-sky-500 hover:underline">Vercel.</A>
+            <A href="https://nextjs.org" target="_blank" rel="noopener noreferrer" classNames="text-sky-500 hover:underline">Next JS</A> &{" "}
+            <A href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" classNames="text-sky-500 hover:underline">Tailwind CSS</A> Hosted on{" "}
+            <A href="https://vercel.com" target="_blank" rel="noopener noreferrer" classNames="text-sky-500 hover:underline">Vercel.</A>
           </h3>
         </div>
     </footer>

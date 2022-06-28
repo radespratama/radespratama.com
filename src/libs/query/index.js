@@ -12,6 +12,15 @@ const queryFetchProject = `
   }
 `;
 
+const queryFetchSlug = `
+  *[_type == "post"]{
+    _id,
+    slug {
+      current
+    },
+  }
+`;
+
 const queryFetchBlog = `
   *[_type=="post"]{
     _id,
@@ -26,4 +35,26 @@ const queryFetchBlog = `
   }
 `;
 
-export { queryFetchProject, queryFetchBlog };
+const queryFetchBlogDynamic = `
+  *[_type == "post" && slug.current == $slug][0]{
+    _id,
+    title,
+    shortDescription,
+    slug,
+    mainImage,
+    author -> {
+      name,
+      image
+    },
+    tags[] -> { title },
+    body,
+    publishedAt
+  }
+`;
+
+export {
+  queryFetchProject,
+  queryFetchBlog,
+  queryFetchSlug,
+  queryFetchBlogDynamic,
+};

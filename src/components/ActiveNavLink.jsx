@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 
-export function A({ href, children, classNames }) {
+export function A({ href, children, classNames, target, rel }) {
   return (
     <Link href={href} passHref>
-      <a className={classNames} target="_blank" rel="noopener noreferrer">
+      <a className={classNames} target={target} rel={rel}>
         {children}
       </a>
     </Link>
@@ -27,7 +27,7 @@ function ActiveLink({ router, href, children, classNames }) {
         isCurrentPath
           ? 'text-white dark:text-gray-900 underline'
           : 'text-gray-400'
-      } ${classNames} text-base font-medium tracking-tight px-4 hover:underline underline-offset-[0.625rem]`}
+      } ${classNames} text-base font-medium tracking-tight md:px-4 hover:underline underline-offset-[0.625rem]`}
       href={href}
       onClick={handleClick}
     >

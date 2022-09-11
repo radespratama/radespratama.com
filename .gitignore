@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /server/node_modules
+/server/dist
 /.pnp
 .pnp.js
 
@@ -19,9 +20,6 @@
 # misc
 .DS_Store
 *.pem
-/server/yarn.lock
-yarn.lock
-package-lock.json
 
 # debug
 npm-debug.log*
@@ -31,6 +29,11 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

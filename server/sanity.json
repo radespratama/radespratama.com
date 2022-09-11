@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "Dev"
+    "name": "personal-platform"
   },
   "api": {
-    "projectId": "acen789b",
+    "projectId": "pyd70w4z",
     "dataset": "production"
   },
   "plugins": [
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

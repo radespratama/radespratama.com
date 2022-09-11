@@ -7,12 +7,6 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule) => [
-        Rule.required()
-          .min(10)
-          .error('A title of min. 10 characters is required'),
-        Rule.max(60).warning('Shorter titles are usually better'),
-      ],
     },
     {
       name: 'slug',
@@ -22,17 +16,6 @@ export default {
         source: 'title',
         maxLength: 96,
       },
-    },
-    {
-      name: 'shortDescription',
-      title: 'Short description',
-      type: 'string',
-      validation: (Rule) => [
-        Rule.required()
-          .min(7)
-          .error('A title of min. 7 characters is required'),
-        Rule.max(200).warning('Shorter description are usually better'),
-      ],
     },
     {
       name: 'author',
@@ -49,10 +32,10 @@ export default {
       },
     },
     {
-      name: 'tags',
-      title: 'Tags',
+      name: 'categories',
+      title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'tags' } }],
+      of: [{ type: 'reference', to: { type: 'category' } }],
     },
     {
       name: 'publishedAt',

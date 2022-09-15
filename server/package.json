@@ -5,7 +5,7 @@
   "description": "",
   "main": "package.json",
   "author": "Rades Pratama <puturades89@gmail.com>",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"
@@ -14,13 +14,13 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.31.0",
-    "@sanity/core": "^2.31.0",
-    "@sanity/default-layout": "^2.31.0",
-    "@sanity/default-login": "^2.31.0",
-    "@sanity/desk-tool": "^2.31.0",
+    "@sanity/base": "^2.33.0",
+    "@sanity/core": "^2.33.0",
+    "@sanity/default-layout": "^2.33.0",
+    "@sanity/default-login": "^2.33.0",
+    "@sanity/desk-tool": "^2.33.0",
     "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.31.0",
+    "@sanity/vision": "^2.33.0",
     "eslint": "^8.6.0",
     "prop-types": "^15.7",
     "react": "^17.0",

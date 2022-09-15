@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .badge {
+    @apply px-2 py-1 text-xs rounded-md font-bold bg-gray-800;
+  }
+}

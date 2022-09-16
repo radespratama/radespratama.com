@@ -14,6 +14,7 @@ module.exports = {
     },
     colors: ({ colors }) => ({
       transparent: colors.transparent,
+      black: colors.black,
       white: colors.white,
       gray: { ...colors.gray, 100: "#F2F2F2", 950: "#111111" },
       sky: { ...colors.sky, 900: "#523ee8", 700: "#8070ff" },
@@ -22,6 +23,7 @@ module.exports = {
     }),
     fontFamily: {
       sans: ["Outfit", defaultTheme.fontFamily.sans],
+      mono: ["Cascadia Code", defaultTheme.fontFamily.mono],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

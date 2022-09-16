@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
 import AppLayout from "@/layouts/AppLayout";
 import SEO from "@/components/SEO";
-import Hero from "@/components/Hero";
+const NavigationBottom = dynamic(() => import("@/components/NavigationBottom"));
+const Intro = dynamic(() => import("@/components/Intro"));
 
 const Home: NextPage = () => {
   const { asPath } = useRouter();
@@ -15,7 +17,8 @@ const Home: NextPage = () => {
         description="Someone who calls himself a Software Developer is interested in front-end development and understands UI Design—which he is currently exploring with Open-source Software."
       />
       <AppLayout isHeader isFooter>
-        {/* <Hero /> */}
+        <Intro />
+        <NavigationBottom />
       </AppLayout>
     </>
   );

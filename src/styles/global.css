@@ -3,7 +3,58 @@
 @tailwind utilities;
 
 @layer components {
+  @font-face {
+    font-family: "Cascadia Code";
+    src: url("/fonts/CascadiaCode.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
   .badge {
     @apply px-2 py-1 text-xs rounded-md font-bold bg-gray-800;
+  }
+
+  .heading {
+    @apply text-[65px] xs:text-7xl sm:text-[80px] md:text-[95px] lg:text-[110px];
+  }
+
+  .half-screen {
+    min-height: calc(100vh - 4.5rem);
+  }
+
+  .navigation {
+    @apply fixed left-0 right-0 mx-auto z-10;
+  }
+
+  .unblur {
+    animation: unBlur 1s linear;
+  }
+
+  @keyframes unBlur {
+    from {
+      filter: blur(10px);
+    }
+    to {
+      filter: blur(0);
+    }
+  }
+}
+
+@layer utilities {
+  .writing-mode-vertical {
+    writing-mode: vertical-lr;
+  }
+
+  .text-shadow {
+    text-shadow: 5px 5px #4b5563;
+  }
+
+  .rounded-me {
+    border-radius: 18px 0 18px 18px;
+  }
+
+  .shadow-3d {
+    box-shadow: 4px 5px 0 0 #1f2937;
   }
 }

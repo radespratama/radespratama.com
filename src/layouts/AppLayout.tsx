@@ -1,6 +1,7 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import Header from "@/components/Header";
+const Header = dynamic(() => import("@/components/Header"));
 import Footer from "@/components/Footer";
 
 interface ILayout {

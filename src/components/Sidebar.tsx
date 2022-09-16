@@ -18,7 +18,7 @@ const Sidebar: React.FC<ISidebar> = ({ isOpen, isClose }) => {
   const tw = {
     container: wtl(`
       fixed top-0 ${isOpen ? "right-0" : "-right-full"} w-[280px]
-      h-screen bg-gray-950 border-l border-gray-800
+      min-h-screen bg-gray-950 border-l border-gray-800
       transition-all duration-[550ms] z-30 p-3
     `),
     overlay: wtl(`

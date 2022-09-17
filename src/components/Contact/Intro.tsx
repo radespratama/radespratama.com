@@ -82,7 +82,7 @@ const Intro: React.FC = () => {
           animate="visible"
           transition={{ delay: 1 }}
           href="https://tinyurl.com/sayhiforyou"
-          className="inline-flex items-center px-10 py-4 rounded-xl text-xl bg-emerald-400 hover:bg-emerald-500"
+          className="inline-flex items-center px-10 py-4 rounded-xl text-xl bg-emerald-500 hover:bg-emerald-600"
         >
           <BsDownload className="text-xl mr-2" />
           Resume

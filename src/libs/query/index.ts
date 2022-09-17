@@ -17,12 +17,7 @@ export const queryFetchAllProject = `
     repository,
     tag[] -> { title },
     mainImage,
-    shortDescription
-  }
-`;
-
-export const queryCountProject = `
-  {
-    total: count(*[_type == "post"])
+    shortDescription,
+    'total': count(*[_type == "post"])
   }
 `;

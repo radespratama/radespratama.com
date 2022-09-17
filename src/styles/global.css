@@ -31,6 +31,25 @@
     animation: unBlur 1s linear;
   }
 
+  .title-mark {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .title-mark::before {
+    @apply bg-sky-500 absolute inset-0 transform;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  .title-mark:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
   @keyframes unBlur {
     from {
       filter: blur(10px);
@@ -56,5 +75,9 @@
 
   .shadow-3d {
     box-shadow: 4px 5px 0 0 #1f2937;
+  }
+
+  .border-tlr {
+    @apply border-t-[3px] border-r-[3px] border-l-[3px];
   }
 }

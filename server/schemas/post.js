@@ -27,7 +27,7 @@ export default {
       name: "repository",
       title: "Repository",
       type: "string",
-      validation: (Rule) => Rule.required().min(1).max(100),
+      validation: (Rule) => Rule.max(100),
     },
     {
       name: "demoUrl",

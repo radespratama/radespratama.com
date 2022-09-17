@@ -18,3 +18,11 @@ export const FadeContainer: Variants = {
     },
   },
 };
+
+export const RevealFade: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};

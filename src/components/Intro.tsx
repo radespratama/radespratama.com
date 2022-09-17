@@ -131,16 +131,16 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
           fill-white`}
         />
 
-        <motion.div className="space-y-5 pb-10">
-          {project?.map(({ _id, title, slug }, index) => (
+        <div className="space-y-5 pb-10">
+          {project?.map(({ _id, title, demoUrl }, index) => (
             <MiniCard
               key={_id}
-              href={`/project/${slug.current}`}
+              href={demoUrl}
               title={title}
-              transition={{ delay: 0.8 + index - 0.5 }}
+              transition={{ delay: 0.8 + index - 0.4 }}
             />
           ))}
-        </motion.div>
+        </div>
       </div>
     </article>
   );

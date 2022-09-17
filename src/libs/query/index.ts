@@ -4,6 +4,25 @@ export const queryFetchMiniCard = `
     author -> { name },
     title,
     slug { current },
-    publishedAt
+    publishedAt,
+    demoUrl
+  }
+`;
+
+export const queryFetchAllProject = `
+  *[_type == "post"] | order(_createdAt asc){
+    _id,
+    title,
+    demoUrl,
+    repository,
+    tag[] -> { title },
+    mainImage,
+    shortDescription
+  }
+`;
+
+export const queryCountProject = `
+  {
+    total: count(*[_type == "post"])
   }
 `;

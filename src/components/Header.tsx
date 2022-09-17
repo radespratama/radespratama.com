@@ -1,6 +1,5 @@
 import React from "react";
 import wtl from "windsplit";
-import { motion } from "framer-motion";
 
 import I from "./Icon";
 import Sidebar from "./Sidebar";

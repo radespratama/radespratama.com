@@ -1,11 +1,16 @@
 export interface IMiniCard {
   _id: string;
-  author: {
-    name: string;
-  };
   title: string;
-  slug: {
-    current: string;
+  shortDescription: string;
+  slug?: {
+    current?: string;
+  };
+  author?: {
+    name?: string;
   };
   publishedAt: string;
+  demoUrl: string;
+  repository: string;
+  tag: { [key: string]: any };
+  mainImage: () => void | string;
 }

@@ -19,10 +19,6 @@
     @apply text-[65px] xs:text-7xl sm:text-[80px] md:text-[95px] lg:text-[110px];
   }
 
-  .half-screen {
-    min-height: calc(100vh - 4.5rem);
-  }
-
   .navigation {
     @apply fixed left-0 right-0 mx-auto z-10;
   }

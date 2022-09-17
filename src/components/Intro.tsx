@@ -24,8 +24,8 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
     `),
     heading: wtl(`
       font-bold py-2 tracking-tight cursor-pointer
-      title leading-none heading select-none
-      text-shadow -mx-2
+      leading-none heading select-none text-shadow 
+      -mx-2
     `),
     description: wtl(`
       py-3 text-lg md:text-xl

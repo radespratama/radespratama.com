@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "sanity:dev": "cd server && sanity start",
-    "sanity:deploy": "cd server && sanity deploy"
+    "sanity:deploy": "cd server && sanity deploy",
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.1",

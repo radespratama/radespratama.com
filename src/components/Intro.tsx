@@ -8,8 +8,10 @@ import { MiniCard } from "./Card";
 import Images from "./Images";
 
 import { FadeContainer, Fade } from "@/libs/animation";
+import { IMiniCard } from "@/types/Response";
+import { A } from "./Links";
 
-const Intro: React.FC = () => {
+const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
   const constraintsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
@@ -60,7 +62,7 @@ const Intro: React.FC = () => {
           transition={{ delay: 0.1 }}
           className="text-lg"
         >
-          Hi, I&apos;m
+          Hi, I&apos;m a Junior
         </motion.p>
         <motion.h1
           variants={Fade}
@@ -130,8 +132,14 @@ const Intro: React.FC = () => {
         />
 
         <motion.div className="space-y-5 pb-10">
-          <MiniCard title="Hello" transition={{ delay: 0.8 }} />
-          <MiniCard title="Hello" transition={{ delay: 0.9 }} />
+          {project?.map(({ _id, title, slug }, index) => (
+            <MiniCard
+              key={_id}
+              href={`/project/${slug.current}`}
+              title={title}
+              transition={{ delay: 0.8 + index - 0.5 }}
+            />
+          ))}
         </motion.div>
       </div>
     </article>

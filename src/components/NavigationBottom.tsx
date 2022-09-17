@@ -43,7 +43,7 @@ const NavigationBottom: React.FC = () => {
           Linkedin
         </A>
         <A
-          href="/"
+          href="https://tinyurl.com/sayhiforyou"
           target="_blank"
           className={`${tw.centering} hover:text-emerald-400`}
         >

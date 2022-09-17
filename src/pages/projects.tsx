@@ -17,7 +17,7 @@ const Projects: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
   return (
     <>
       <SEO
-        title="✱ Developer Portfolio - Rades Pratama"
+        title="Projects ✱ Software Developer"
         url={process.env.NEXT_PUBLIC_BASE_URL + asPath}
         description="Someone who calls himself a Software Developer is interested in front-end development and understands UI Design—which he is currently exploring with Open-source Software."
       />

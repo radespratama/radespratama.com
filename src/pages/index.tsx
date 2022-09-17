@@ -21,7 +21,7 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
         url={process.env.NEXT_PUBLIC_BASE_URL + asPath}
         description="Someone who calls himself a Software Developer is interested in front-end development and understands UI Design—which he is currently exploring with Open-source Software."
       />
-      <AppLayout isHeader isFooter>
+      <AppLayout isHeader>
         <Intro project={project} />
         <NavigationBottom />
       </AppLayout>

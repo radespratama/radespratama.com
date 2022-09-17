@@ -20,7 +20,7 @@ const Header: React.FC<{ isHeader?: boolean }> = ({ isHeader }) => {
     `),
     navigation: wtl(`
       max-w-screen-md mx-auto grid grid-cols-4
-      gap-4 py-3 px-3 md:px-0 border-b-2
+      gap-4 py-3 px-3 xl:px-0 border-b-2
       border-gray-800
     `),
     linkGithub: wtl(`

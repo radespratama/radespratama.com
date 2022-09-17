@@ -27,7 +27,7 @@ const Badge = ({ title }: { title?: string }) => {
   const tw = {
     container: wtl(`
       rounded-sm text-sm px-2
-      bg-gray-600 cursor-pointer
+      bg-gray-800 py-[2px] cursor-pointer
       hover:opacity-75
     `),
   };
@@ -105,7 +105,7 @@ const Card: React.FC<ILargeCard> = ({
 
         {repository !== "/" ? (
           <A href={repository} target="_blank">
-            <I.Github className="w-5 h-5 stroke-white" />
+            <I.Github className="w-5 h-5 stroke-white hover:stroke-sky-500" />
           </A>
         ) : null}
       </div>

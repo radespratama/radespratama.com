@@ -17,9 +17,10 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
 
   const tw = {
     container: wtl(`
+      grid-cols-1 sm:grid-cols-3 gap-4
       max-w-screen-md mx-auto px-3 
-      md:px-0 pt-24 grid grid-cols-1
-      sm:grid-cols-3 gap-4 half-screen
+      xl:px-0 grid sm:pt-0 pt-24
+      min-h-screen place-items-center
     `),
     heading: wtl(`
       font-bold py-2 tracking-tight cursor-pointer
@@ -42,7 +43,7 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
     `),
     profileCard: wtl(`
       border-2 border-sky-400 rounded-me
-      -mt-0 md:-mt-3 bg-gray-950 relative p-2 w-full
+      -mt-0 md:-mt-3 bg-gray-950 p-2 w-full
       flex items-center cursor-pointer mb-10
     `),
   };
@@ -97,7 +98,7 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.7 }}
-            onClick={() => router.push("/about")}
+            onClick={() => router.push("/contacts")}
             className={tw.button}
           >
             <I.Mail className="w-5 h-5 mr-2" />
@@ -122,11 +123,11 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
 
           <span className="text-xl font-medium ml-3">
             Let&apos;s Explore My{" "}
-            <span className="text-emerald-500">Portfolio</span>
+            <A href="/projects" className="text-emerald-500">Portfolio</A>
           </span>
         </motion.div>
         <I.ArrowSnake
-          className={`absolute hidden md:inline top-[1rem] -right-[3.8rem]
+          className={`absolute hidden xl:inline top-[1rem] -right-[3.8rem]
           w-[60px] h-[120px] -rotate-12 transform -scale-x-100
           fill-white`}
         />

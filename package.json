@@ -15,6 +15,7 @@
     "framer-motion": "^7.3.2",
     "next": "latest",
     "next-sanity": "^0.8.2",
+    "next-sitemap": "^3.1.22",
     "nextjs-progressbar": "^0.0.14",
     "react": "latest",
     "react-dom": "latest",

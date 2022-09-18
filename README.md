@@ -42,15 +42,11 @@ Create an `.env.local` or `.env` and follow the variable name based on `.env.exa
 Install the dependencies with `npm i` or `yarn`  
 Start the project by `npm run dev` or `yarn dev`
 
-<br />
-
 ## 🪁 Deployment
 
 You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fradespratama%2Fhi)
-
-<br />
 
 ## 📌 Overview
 
@@ -60,7 +56,6 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 ✔️ `pages/projects.tsx` = List all my portfolio <br/>
 ✔️ `pages/contacts.tsx` = Contact me
 
-<br />
 
 ## ⚡ Tools
 
@@ -69,5 +64,3 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 ![ReactJs](https://img.shields.io/badge/React-585455?style=for-the-badge&logo=react&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0284C7?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Sanity](https://img.shields.io/badge/SANITY-FFA451?style=for-the-badge&logo=sanity&logoColor=white)
-
-<br />

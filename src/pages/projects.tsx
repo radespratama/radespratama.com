@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
+import Intro from "@/components/Project/Intro";
 const ContentList = dynamic(() => import("@/components/Project/ContentList"));
-const Intro = dynamic(() => import("@/components/Project/Intro"));
 
 import { IMiniCard } from "@/types/Response";
 import { queryFetchAllProject } from "@/libs/query";

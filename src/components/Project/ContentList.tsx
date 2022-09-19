@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import dynamic from "next/dynamic";
 import wtl from "windsplit";
 
-import Card from "@/components/Card";
+const Card = dynamic(() => import("@/components/Card"));
 const Skeleton = dynamic(() => import("@/components/Skeleton"));
 
 import { IMiniCard } from "@/types/Response";
 import { urlFor } from "@/libs/config/sanity.config";
 
 const ContentList: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
-  const [isSkeleton, setIsSkeleton] = useState<boolean>(true);
+  const [isSkeleton, setIsSkeleton] = React.useState<boolean>(true);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (project) {
       setTimeout(() => {
         setIsSkeleton(false);

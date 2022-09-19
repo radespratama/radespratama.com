@@ -18,28 +18,10 @@ const Icon = {
       <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
     </svg>
   ),
-  Web: ({ className }: IIcon) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      viewBox="0 0 24 24"
-      strokeWidth="2"
-      stroke="currentColor"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M4.028 7.82a9 9 0 1 0 12.823 -3.4c-1.636 -1.02 -3.064 -1.02 -4.851 -1.02h-1.647"></path>
-      <path d="M4.914 9.485c-1.756 -1.569 -.805 -5.38 .109 -6.17c.086 .896 .585 1.208 1.111 1.685c.88 -.275 1.313 -.282 1.867 0c.82 -.91 1.694 -2.354 2.628 -2.093c-1.082 1.741 -.07 3.733 1.371 4.173c-.17 .975 -1.484 1.913 -2.76 2.686c-1.296 .938 -.722 1.85 0 2.234c.949 .506 3.611 -.995 4.545 .354c-1.698 .102 -1.536 3.107 -3.983 2.727c2.523 .957 4.345 .462 5.458 -.34c1.965 -1.52 2.879 -3.542 2.879 -5.557c-.014 -1.398 .194 -2.695 -1.26 -4.75"></path>
-    </svg>
-  ),
   Copyright: ({ className }: IIcon) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -56,8 +38,6 @@ const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -84,8 +64,6 @@ const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -110,8 +88,6 @@ const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -127,8 +103,6 @@ const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -145,8 +119,6 @@ const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -161,29 +133,10 @@ const Icon = {
       <circle transform="rotate(30 12 12)" cx="12" cy="12" r="1"></circle>
     </svg>
   ),
-  Framer: ({ className }: IIcon) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      strokeWidth="2"
-      stroke="currentColor"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M6 15h12l-12 -12h12v6h-12v6l6 6v-6"></path>
-    </svg>
-  ),
   Vercel: ({ className }: IIcon) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"

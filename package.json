@@ -9,7 +9,10 @@
     "lint": "next lint",
     "sanity:dev": "cd server && sanity start",
     "sanity:deploy": "cd server && sanity deploy",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.1",
@@ -24,6 +27,7 @@
     "windsplit": "^0.1.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^12.3.0",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@types/node": "18.7.13",
     "@types/react": "18.0.17",

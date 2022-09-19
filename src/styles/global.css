@@ -11,6 +11,28 @@
     font-display: swap;
   }
 
+  .intro-container {
+    @apply max-w-screen-md mx-auto grid grid-cols-1 place-items-center
+    px-3 xl:px-0 min-h-screen;
+  }
+
+  .intro-heading {
+    @apply font-bold py-2 tracking-tight cursor-pointer
+    leading-none heading select-none text-shadow;
+  }
+
+  .profile-card {
+    @apply border-2 border-sky-400 rounded-me
+    -mt-0 md:-mt-3 bg-gray-950 p-2 w-full
+    flex items-center cursor-pointer mb-10;
+  }
+
+  .intro-button {
+    @apply my-4 px-8 py-2 inline-flex items-center
+    bg-emerald-400 hover:bg-white text-gray-900
+    text-lg font-medium rounded-lg cursor-pointer;
+  }
+
   .badge {
     @apply px-2 py-1 text-xs rounded-md font-bold bg-gray-800;
   }

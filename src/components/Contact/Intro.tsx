@@ -14,10 +14,6 @@ const Intro: React.FC = () => {
       max-w-screen-md mx-auto grid grid-cols-1
       gap-6 place-items-center px-2 xl:px-0 min-h-screen
     `),
-    heading: wtl(`
-      font-bold py-2 tracking-tight cursor-pointer
-      leading-none heading select-none text-shadow
-    `),
     mail: wtl(`
       inline-flex items-center font-medium
       text-xl transition-all duration-200
@@ -41,7 +37,7 @@ const Intro: React.FC = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className={tw.heading}
+          className="intro-heading"
         >
           Let&apos;s work together{" "}
           <span className="hidden xl:inline">🤝🏻</span>
@@ -82,7 +78,7 @@ const Intro: React.FC = () => {
           animate="visible"
           transition={{ delay: 1 }}
           href="https://tinyurl.com/sayhiforyou"
-          className="inline-flex items-center px-10 py-4 rounded-xl text-xl bg-emerald-500 hover:bg-emerald-600"
+          className="intro-button"
         >
           <BsDownload className="text-xl mr-2" />
           Resume

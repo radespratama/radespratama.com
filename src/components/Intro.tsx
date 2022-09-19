@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import wtl from "windsplit";
 
 import I from "./Icon";
-import { MiniCard } from "./Card";
+const MiniCard = dynamic(() => import("@/components/MiniCard"));
 import Images from "./Images";
 
 import { FadeContainer, Fade } from "@/libs/animation";
@@ -17,34 +18,17 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
 
   const tw = {
     container: wtl(`
-      grid-cols-1 sm:grid-cols-3 gap-4
-      max-w-screen-md mx-auto px-3 
-      xl:px-0 grid sm:pt-0 pt-24
-      min-h-screen place-items-center
-    `),
-    heading: wtl(`
-      font-bold py-2 tracking-tight cursor-pointer
-      leading-none heading select-none text-shadow 
-      -mx-2
+      intro-container gap-4 sm:pt-0 pt-24
+      sm:grid-cols-3
     `),
     description: wtl(`
       py-3 text-lg md:text-xl
       text-gray-500 select-none
       max-w-lg
     `),
-    button: wtl(`
-      my-4 px-8 py-2 flex items-center
-      bg-emerald-400 hover:bg-white text-gray-900
-      text-lg font-medium rounded-lg cursor-pointer
-    `),
     socialButton: wtl(`
       px-6 py-2 rounded-lg
       flex items-center
-    `),
-    profileCard: wtl(`
-      border-2 border-sky-400 rounded-me
-      -mt-0 md:-mt-3 bg-gray-950 p-2 w-full
-      flex items-center cursor-pointer mb-10
     `),
   };
 
@@ -70,7 +54,7 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className={tw.heading}
+          className="intro-heading -mx-2"
         >
           Software Developer
         </motion.h1>
@@ -99,7 +83,7 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
             animate="visible"
             transition={{ delay: 0.7 }}
             onClick={() => router.push("/contacts")}
-            className={tw.button}
+            className="intro-button"
           >
             <I.Mail className="w-5 h-5 mr-2" />
             Let&apos;s talk
@@ -112,7 +96,7 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
           initial={{ opacity: 0, y: 20, rotate: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className={tw.profileCard}
+          className="profile-card"
         >
           <I.Notification className="-right-1 -top-2" />
           <Images
@@ -123,7 +107,9 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
 
           <span className="text-xl font-medium ml-3">
             Let&apos;s Explore My{" "}
-            <A href="/projects" className="text-emerald-500">Portfolio</A>
+            <A href="/projects" className="text-emerald-500">
+              Portfolio
+            </A>
           </span>
         </motion.div>
         <I.ArrowSnake

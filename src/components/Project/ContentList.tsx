@@ -1,9 +1,8 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import wtl from "windsplit";
 
-const Card = dynamic(() => import("@/components/Card"));
-const Skeleton = dynamic(() => import("@/components/Skeleton"));
+import Card from "@/components/Card";
+import Skeleton from "@/components/Skeleton";
 
 import { IMiniCard } from "@/types/Response";
 import { urlFor } from "@/libs/config/sanity.config";

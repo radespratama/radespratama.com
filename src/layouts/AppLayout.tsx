@@ -1,16 +1,17 @@
-import React from "react";
+import { FC, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
-const Header = dynamic(() => import("@/components/Header"));
-import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+const Header = dynamic(() => import("@/components/Navigation/Header"));
+import Footer from "@/components/Navigation/Footer";
 
-interface ILayout {
-  children: React.ReactNode;
+interface ILayoutProps {
+  children: ReactNode;
   isHeader?: boolean;
   isFooter?: boolean;
 }
 
-export default function AppLayout({ children, isHeader, isFooter }: ILayout) {
+const AppLayout: FC<ILayoutProps> = ({ children, isHeader, isFooter }) => {
   return (
     <>
       <Header isHeader={isHeader} />
@@ -18,4 +19,6 @@ export default function AppLayout({ children, isHeader, isFooter }: ILayout) {
       <Footer isFooter={isFooter} />
     </>
   );
-}
+};
+
+export default AppLayout;

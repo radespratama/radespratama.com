@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-import Intro from "@/components/Project/Intro";
-const ContentList = dynamic(() => import("@/components/Project/ContentList"));
+import Intro from "@/modules/Projects";
+const ContentList = dynamic(() => import("@/modules/Projects/content.module"));
 
-import { IMiniCard } from "@/types/Response";
+import { IMiniCard } from "@/types/response";
 import { queryFetchAllProject } from "@/libs/query";
 import { sanityClient } from "@/libs/config/sanity.config";
 

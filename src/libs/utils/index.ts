@@ -1,2 +1,2 @@
-export * from "./contentData";
 export * from "./gTag";
+export * from "./isNavigationLinkName";

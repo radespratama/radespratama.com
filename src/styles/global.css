@@ -13,7 +13,7 @@
 
   .intro-container {
     @apply max-w-screen-md mx-auto grid grid-cols-1 place-items-center
-    px-3 xl:px-0 min-h-screen;
+    px-4 xl:px-0 min-h-screen;
   }
 
   .intro-heading {
@@ -31,6 +31,12 @@
     @apply my-4 px-8 py-2 inline-flex items-center
     bg-emerald-400 hover:bg-white text-gray-900
     text-lg font-medium rounded-lg cursor-pointer;
+  }
+
+  .contact-button {
+    @apply inline-flex items-center font-medium
+    text-xl transition-all duration-200
+    cursor-pointer;
   }
 
   .badge {
@@ -54,6 +60,11 @@
     cursor: pointer;
   }
 
+  .text-hover {
+    @apply inline-flex items-center font-medium text-xl 
+    transition-all duration-200 cursor-pointer;
+  }
+
   .title-mark::before {
     @apply bg-sky-500 absolute inset-0 transform;
     content: "";
@@ -66,6 +77,22 @@
   .title-mark:hover::before {
     transform: scaleX(1);
     transform-origin: left;
+  }
+
+  .sidebar {
+    @apply fixed top-0 w-[17.5rem] min-h-screen bg-gray-950 border-l 
+    border-gray-800 transition-all duration-[550ms] z-30 p-3;
+  }
+
+  .sidebarOverlay {
+    @apply w-[100vw] min-h-screen fixed top-0 left-0 bg-gray-900/20 
+    backdrop-blur z-20 transition-all duration-300;
+  }
+
+  .sidebarOverlayDouble {
+    @apply fixed top-0 bg-gray-950 w-[14.688rem] transition-all 
+    duration-[400ms] border-l border-gray-800 shadow-xl shadow-black/50
+    min-h-screen px-4 py-3 flex flex-col items-end justify-between;
   }
 
   @keyframes unBlur {

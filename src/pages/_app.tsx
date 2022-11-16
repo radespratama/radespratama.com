@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
 import Script from "next/script";
+import { useRouter } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 
 import * as gtag from "@/libs/utils";
@@ -45,10 +45,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <NextNProgress
-        color="#77ACF1"
+        color="#6ee7b7"
         startPosition={0.3}
         stopDelayMs={200}
-        height={3}
+        height={2}
         showOnShallow
       />
       <Component {...pageProps} />

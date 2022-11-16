@@ -1,16 +1,16 @@
-import React from "react";
-import wtl from "windsplit";
+import { FC, useEffect, useState } from "react";
+import ctx from "windsplit";
 
 import Card from "@/components/Card";
 import Skeleton from "@/components/Skeleton";
 
-import { IMiniCard } from "@/types/Response";
+import { IMiniCard } from "@/types/response";
 import { urlFor } from "@/libs/config/sanity.config";
 
-const ContentList: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
-  const [isSkeleton, setIsSkeleton] = React.useState<boolean>(true);
+const ProjectContentModule: FC<{ project: [IMiniCard] }> = ({ project }) => {
+  const [isSkeleton, setIsSkeleton] = useState<boolean>(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (project) {
       setTimeout(() => {
         setIsSkeleton(false);
@@ -20,20 +20,14 @@ const ContentList: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
 
   const skeletonCount = Object.keys(project);
 
-  const tw = {
-    container: wtl(`
-      max-w-screen-md mx-auto grid
-      grid-cols-1 xs:grid-cols-2
-      sm:grid-cols-3 gap-6 px-2
-      my-10
-    `),
-  };
   return (
-    <section className={tw.container}>
+    <section
+      className={ctx(
+        `max-w-screen-md mx-auto grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3
+        gap-6 px-2 my-10`
+      )}>
       {isSkeleton ? (
-        skeletonCount.map((index) => (
-          <Skeleton key={`${index}-${Math.random()}`} />
-        ))
+        skeletonCount.map((index) => <Skeleton key={`${index}-${Math.random()}`} />)
       ) : (
         <>
           {project.map((item) => (
@@ -53,4 +47,4 @@ const ContentList: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
   );
 };
 
-export default ContentList;
+export default ProjectContentModule;

@@ -1,61 +1,42 @@
-import React, { useRef } from "react";
-import dynamic from "next/dynamic";
+import { FC, useRef } from "react";
+import ctx from "windsplit";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import wtl from "windsplit";
 
-import I from "./Icon";
-const MiniCard = dynamic(() => import("@/components/MiniCard"));
-import Images from "./Images";
+import I from "@/components/Icon";
+import Images from "@/components/Images";
+import MiniCard from "@/components/Card/MiniCard";
 
 import { FadeContainer, Fade } from "@/libs/animation";
-import { IMiniCard } from "@/types/Response";
-import { A } from "./Links";
 
-const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
+import { IMiniCard } from "@/types/response";
+
+const HomeModule: FC<{ project: [IMiniCard] }> = ({ project }) => {
   const constraintsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const tw = {
-    container: wtl(`
-      intro-container gap-4 sm:pt-0 pt-24
-      sm:grid-cols-3
-    `),
-    description: wtl(`
-      py-3 text-lg md:text-xl
-      text-gray-500 select-none
-      max-w-lg
-    `),
-    socialButton: wtl(`
-      px-6 py-2 rounded-lg
-      flex items-center
-    `),
-  };
-
   return (
-    <article className={tw.container}>
+    <article className="intro-container sm:pt-0 pt-24 sm:grid-cols-3">
       <motion.div
         variants={FadeContainer}
         initial="hidden"
         animate="visible"
-        className="col-span-1 sm:col-span-2"
-      >
+        className="col-span-1 sm:col-span-2">
         <motion.p
           variants={Fade}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.1 }}
-          className="text-lg"
-        >
-          Hi, I&apos;m a Junior
+          className="text-lg">
+          Hi, I&apos;m a junior
         </motion.p>
         <motion.h1
           variants={Fade}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.3 }}
-          className="intro-heading -mx-2"
-        >
+          className="intro-heading -mx-2">
           Software Developer
         </motion.h1>
         <motion.h5
@@ -63,17 +44,11 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.5 }}
-          className={tw.description}
-        >
-          <span className="text-white">
-            A self-taught developer with an interest in Computer Science.
-          </span>{" "}
-          I hope you will get to know a little bit about me and enjoy my work.
+          className="py-3 text-lg md:text-xl text-gray-500 select-none max-w-lg">
+          <span className="text-white">from Bali, Indonesia.</span> A self-taught developer with an
+          interest in Computer Science ⚡
         </motion.h5>
-        <motion.div
-          ref={constraintsRef}
-          className="flex items-center relative max-w-fit"
-        >
+        <motion.div ref={constraintsRef} className="flex items-center relative max-w-fit">
           <I.ArrowSnake className="absolute -top-[7.2rem] -left-[5.5rem] w-[84px] h-[172px] fill-white" />
           <motion.button
             drag
@@ -83,41 +58,39 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
             animate="visible"
             transition={{ delay: 0.7 }}
             onClick={() => router.push("/contacts")}
-            className="intro-button"
-          >
+            className="intro-button">
             <I.Mail className="w-5 h-5 mr-2" />
             Let&apos;s talk
           </motion.button>
         </motion.div>
       </motion.div>
-
-      <div className="col-span-1 relative">
+      <div className="col-span-1 relative mt-4 xl:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 20, rotate: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="profile-card"
-        >
+          className="profile-card">
           <I.Notification className="-right-1 -top-2" />
           <Images
             src="/static/profile-me.jpg"
+            alt="Rades Pratama"
             size="h-14 w-14"
             className="rounded-xl"
           />
-
           <span className="text-xl font-medium ml-3">
             Let&apos;s Explore My{" "}
-            <A href="/projects" className="text-emerald-500">
+            <Link href="/projects" className="text-emerald-500">
               Portfolio
-            </A>
+            </Link>
           </span>
         </motion.div>
         <I.ArrowSnake
-          className={`absolute hidden xl:inline top-[1rem] -right-[3.8rem]
-          w-[60px] h-[120px] -rotate-12 transform -scale-x-100
-          fill-white`}
+          className={ctx(
+            `absolute hidden xl:inline top-[1rem] -right-[3.8rem] w-[60px] 
+            h-[120px] -rotate-12 transform -scale-x-100 fill-white
+          `
+          )}
         />
-
         <div className="space-y-5 pb-10">
           {project?.map(({ _id, title, demoUrl }, index) => (
             <MiniCard
@@ -133,4 +106,4 @@ const Intro: React.FC<{ project: [IMiniCard] }> = ({ project }) => {
   );
 };
 
-export default Intro;
+export default HomeModule;

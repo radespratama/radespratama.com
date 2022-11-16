@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import SEO from "@/components/SEO";
 import AppLayout from "@/layouts/AppLayout";
-import { A } from "@/components/Links";
 
-const NotFound: React.FC = () => {
+const NotFound: FC = () => {
   const { asPath } = useRouter();
   return (
     <>
@@ -17,12 +17,11 @@ const NotFound: React.FC = () => {
       <AppLayout>
         <section className="flex flex-col items-center justify-center min-h-screen space-y-4 px-4">
           <h1 className="text-xl font-medium">
-            <span className="text-4xl font-bold">404</span> | Oops, your
-            destination not found!
+            <span className="text-4xl font-bold">404</span> | Oops, your destination not found!
           </h1>
-          <A href="/" className="px-6 py-2 bg-emerald-400 hover:bg-emerald-500 shadow-3d">
+          <Link href="/" className="px-6 py-2 bg-emerald-400 hover:bg-emerald-500 shadow-3d">
             Back to home
-          </A>
+          </Link>
         </section>
       </AppLayout>
     </>

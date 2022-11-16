@@ -14,10 +14,7 @@ export default function SEO({ title, description, url }: SEOProps) {
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="author" content="Putu Rades Pratama" />
-      <meta
-        name="keywords"
-        content="Web Design, Portfolio Website, Portfolio Next JS"
-      />
+      <meta name="keywords" content="Web Design, Portfolio Website, Portfolio Next JS" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"

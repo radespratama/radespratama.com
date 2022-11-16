@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-const Intro = dynamic(() => import("@/components/Contact/Intro"));
+const Intro = dynamic(() => import("@/modules/Contacts"));
 
 const Contacts: NextPage = () => {
   const { asPath } = useRouter();

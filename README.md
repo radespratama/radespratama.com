@@ -56,7 +56,6 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 ✔️ `pages/projects.tsx` = List all my portfolio <br/>
 ✔️ `pages/contacts.tsx` = Contact me
 
-
 ## ⚡ Tools
 
 ![Typescript](https://img.shields.io/badge/Typescript-355DAB?style=for-the-badge&logo=Typescript&logoColor=white)

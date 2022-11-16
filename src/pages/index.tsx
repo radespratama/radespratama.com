@@ -6,13 +6,13 @@ import { useRouter } from "next/router";
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-const NavigationBottom = dynamic(() => import("@/components/NavigationBottom"));
-const Intro = dynamic(() => import("@/components/Intro"));
+import Loading from "@/components/Loading";
+const Intro = dynamic(() => import("@/modules/Home"));
+const NavigationBottom = dynamic(() => import("@/components/Navigation/NavigationBottom"));
 
 import { sanityClient } from "@/libs/config/sanity.config";
 import { queryFetchMiniCard } from "@/libs/query";
-import { IMiniCard } from "@/types/Response";
-import Loading from "@/components/Loading";
+import { IMiniCard } from "@/types/response";
 
 const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -20,9 +20,7 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
 
   useEffect(() => {
     if (isLoading) {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 3000);
+      setTimeout(() => setIsLoading(false), 3000);
     }
   }, [isLoading]);
 
@@ -46,10 +44,7 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
+  res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
 
   const project = await sanityClient.fetch(queryFetchMiniCard);
 

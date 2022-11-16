@@ -40,6 +40,8 @@ next-env.d.ts
 
 package-lock.json
 yarn.lock
+/server/yarn.lock
+/server/package-lock.json
 
 /public/sitemap.xml
 /public/sitemap-0.xml

@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 import Intro from "@/modules/Projects";
 const ContentList = dynamic(() => import("@/modules/Projects/content.module"));
 
-import { IMiniCard } from "@/types/response";
+import { IMiniCard } from "@/types/Response";
 import { queryFetchAllProject } from "@/libs/query";
 import { sanityClient } from "@/libs/config/sanity.config";
 

@@ -10,7 +10,7 @@ import MiniCard from "@/components/Card/MiniCard";
 
 import { FadeContainer, Fade } from "@/libs/animation";
 
-import { IMiniCard } from "@/types/response";
+import { IMiniCard } from "@/types/Response";
 
 const HomeModule: FC<{ project: [IMiniCard] }> = ({ project }) => {
   const constraintsRef = useRef<HTMLDivElement>(null);

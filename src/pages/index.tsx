@@ -12,7 +12,7 @@ const NavigationBottom = dynamic(() => import("@/components/Navigation/Navigatio
 
 import { sanityClient } from "@/libs/config/sanity.config";
 import { queryFetchMiniCard } from "@/libs/query";
-import { IMiniCard } from "@/types/response";
+import { IMiniCard } from "@/types/Response";
 
 const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);

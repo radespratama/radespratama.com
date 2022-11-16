@@ -4,7 +4,7 @@ import ctx from "windsplit";
 import Card from "@/components/Card";
 import Skeleton from "@/components/Skeleton";
 
-import { IMiniCard } from "@/types/response";
+import { IMiniCard } from "@/types/Response";
 import { urlFor } from "@/libs/config/sanity.config";
 
 const ProjectContentModule: FC<{ project: [IMiniCard] }> = ({ project }) => {

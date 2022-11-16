@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { NextPage, GetServerSideProps } from "next";
+import type { NextPage, GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
@@ -43,9 +43,7 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
-
+export const getStaticProps: GetStaticProps = async () => {
   const project = await sanityClient.fetch(queryFetchMiniCard);
 
   return {

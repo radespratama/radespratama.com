@@ -20,7 +20,7 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
 
   useEffect(() => {
     if (isLoading) {
-      setTimeout(() => setIsLoading(false), 3000);
+      setTimeout(() => setIsLoading(false), 1000);
     }
   }, [isLoading]);
 

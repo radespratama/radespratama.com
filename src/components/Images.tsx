@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
 
-interface ImageProps {
+type TImageProps = {
   src: string;
   alt?: string;
   className?: string;
@@ -8,7 +8,7 @@ interface ImageProps {
   onBlur?: boolean;
 }
 
-export default function Images({ src, alt, className, size, onBlur }: ImageProps) {
+export default function Images({ src, alt, className, size, onBlur }: TImageProps) {
   return (
     <div className={`relative cursor-pointer ${size}`}>
       <Image

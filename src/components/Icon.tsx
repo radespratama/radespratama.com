@@ -1,5 +1,8 @@
+import clsx from "clsx";
+
 interface IIconProps {
   className?: string;
+  color?: string;
 }
 
 const Icon = {
@@ -43,6 +46,23 @@ const Icon = {
       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
       <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
     </span>
+  ),
+  Loading: ({ className, color }: IIconProps) => (
+    <svg
+      width="129"
+      height="129"
+      viewBox="0 0 129 129"
+      fill="none"
+      className={clsx(className)}
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M92.75 15.5696C81.9787 9.35082 69.4564 6.85999 57.1251 8.48347C44.7939 10.1069 33.343 15.754 24.5483 24.5488C15.7536 33.3436 10.1067 44.7946 8.48337 57.1258C6.86005 69.4571 9.35104 81.9794 15.57 92.7506C21.789 103.522 31.3883 111.94 42.8793 116.7C54.3702 121.459 67.1106 122.294 79.1244 119.075C91.1381 115.855 101.754 108.762 109.325 98.894C116.897 89.0264 121 76.9362 121 64.4986"
+        stroke={color || "#fff"}
+        strokeWidth="15"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   ),
 };
 

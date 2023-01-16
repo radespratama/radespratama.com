@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import ctx from "windsplit";
+import clsx from "clsx";
 
 import Card from "@/components/Card";
 import Skeleton from "@/components/Skeleton";
@@ -22,9 +22,10 @@ const ProjectContentModule: FC<{ project: [IMiniCard] }> = ({ project }) => {
 
   return (
     <section
-      className={ctx(
-        `max-w-screen-md mx-auto grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3
-        gap-6 px-2 my-10`
+      className={clsx(
+        "max-w-screen-md mx-auto grid grid-cols-1 gap-6 px-2 my-10",
+        "xs:grid-cols-2",
+        "sm:grid-cols-3"
       )}>
       {isSkeleton ? (
         skeletonCount.map((index) => <Skeleton key={`${index}-${Math.random()}`} />)

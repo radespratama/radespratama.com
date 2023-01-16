@@ -1,5 +1,6 @@
 import { HTMLAttributes } from "react";
 import { withRouter, NextRouter } from "next/router";
+import clsx from "clsx";
 
 interface IActiveLink extends HTMLAttributes<HTMLAnchorElement> {
   router: NextRouter;
@@ -19,9 +20,12 @@ const ActiveLink = ({ router, href, children, className }: IActiveLink) => {
 
   return (
     <a
-      className={`${
-        isCurrentPath ? "text-white underline" : "text-gray-400"
-      } ${className} text-base font-medium tracking-tight md:pr-3 underline-offset-[0.625rem]`}
+      className={clsx(
+        "text-base font-medium tracking-tight underline-offset-[0.625rem]",
+        isCurrentPath ? ["text-white underline"] : ["text-gray-400"],
+        className,
+        "md:pr-3"
+      )}
       href={href}
       onClick={handleClick}>
       {children}

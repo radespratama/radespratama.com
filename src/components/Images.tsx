@@ -1,20 +1,21 @@
 import Image from "next/legacy/image";
+import clsx from "clsx";
 
-interface ImageProps {
+type TImageProps = {
   src: string;
   alt?: string;
   className?: string;
   size: string;
   onBlur?: boolean;
-}
+};
 
-export default function Images({ src, alt, className, size, onBlur }: ImageProps) {
+export default function Images({ src, alt, className, size, onBlur }: TImageProps) {
   return (
-    <div className={`relative cursor-pointer ${size}`}>
+    <div className={clsx("relative cursor-pointer", size)}>
       <Image
         src={src}
         alt={alt}
-        className={`${className} z-[2] ${onBlur && "unblur"}`}
+        className={clsx("z-[2]", className, onBlur && "onBlur")}
         objectFit="cover"
         layout="fill"
         loading="lazy"

@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-import Loading from "@/components/Loading";
 const Intro = dynamic(() => import("@/modules/Home"));
 const NavigationBottom = dynamic(() => import("@/components/Navigation/NavigationBottom"));
 
@@ -15,14 +14,7 @@ import { queryFetchMiniCard } from "@/libs/query";
 import { IMiniCard } from "@/types/Response";
 
 const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const { asPath } = useRouter();
-
-  useEffect(() => {
-    if (isLoading) {
-      setTimeout(() => setIsLoading(false), 1000);
-    }
-  }, [isLoading]);
 
   return (
     <>
@@ -31,14 +23,10 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
         url={process.env.NEXT_PUBLIC_BASE_URL + asPath}
         description="Someone who calls himself a Software Developer is interested in front-end development and understands UI Design—which he is currently exploring with Open-source Software."
       />
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <AppLayout isHeader>
-          <Intro project={project} />
-          <NavigationBottom />
-        </AppLayout>
-      )}
+      <AppLayout isHeader>
+        <Intro project={project} />
+        <NavigationBottom />
+      </AppLayout>
     </>
   );
 };

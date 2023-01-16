@@ -17,16 +17,17 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.1",
+    "clsx": "^1.2.1",
     "framer-motion": "^7.3.2",
-    "next": "^13.0.5",
+    "next": "^13.1.2",
     "next-sanity": "^0.8.2",
     "next-sitemap": "^3.1.22",
     "nextjs-progressbar": "^0.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.30.7"
-},
-"devDependencies": {
+  },
+  "devDependencies": {
     "@next/bundle-analyzer": "^12.3.0",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@types/node": "18.7.13",
@@ -39,8 +40,6 @@
     "prettier": "^2.7.1",
     "react-icons": "^4.4.0",
     "tailwindcss": "^3.1.8",
-    "typescript": "4.8.2",
-    "react-loader-spinner": "^5.3.4",
-    "windsplit": "^0.1.1"
+    "typescript": "4.8.2"
   }
 }

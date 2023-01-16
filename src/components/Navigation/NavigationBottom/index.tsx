@@ -1,9 +1,9 @@
 import { FC } from "react";
-import ctx from "windsplit";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { NavigationBottomLinkName } from "@/libs/utils";
+import { NavigationBottomLinkName } from "@/utils";
+import clsx from "clsx";
 
 const NavigationBottom: FC = () => {
   return (
@@ -12,17 +12,21 @@ const NavigationBottom: FC = () => {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 100 }}
-      className={ctx(
-        `navigation bottom-4 w-full max-w-[20rem] xs:max-w-[21.875rem] bg-gray-950 
-        border-[3px] border-gray-800 rounded-lg hidden md:inline
-        `
+      className={clsx(
+        "navigation bottom-4 w-full max-w-[20rem] bg-gray-950",
+        "border-[3px] border-gray-800 rounded-lg hidden",
+        "xs:max-w-[21.875rem]",
+        "md:inline"
       )}>
-      <nav className="p-3 grid grid-cols-3 gap-3">
+      <nav className={clsx("p-3 grid grid-cols-3 gap-3")}>
         {NavigationBottomLinkName.map(({ id, path, icon, title }) => (
           <Link
             key={id}
             href={path}
-            className="inline-flex items-center justify-center gap-1 hover:text-emerald-400">
+            className={clsx(
+              "inline-flex items-center justify-center gap-1",
+              "hover:text-emerald-400"
+            )}>
             {icon}
             <span className="text-base">{title}</span>
           </Link>

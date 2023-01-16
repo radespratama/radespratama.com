@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Document, {
   Html,
   Head,
@@ -26,7 +27,7 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         </Head>
-        <body className="text-white bg-gray-950 antialiased">
+        <body className={clsx("text-white bg-gray-950 antialiased")}>
           <Main />
           <NextScript />
         </body>

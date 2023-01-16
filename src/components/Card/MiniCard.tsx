@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BsArrowReturnRight } from "react-icons/bs";
 
 import { Fade } from "@/libs/animation";
+import clsx from "clsx";
 
 interface IMiniCard {
   transition?: object;
@@ -18,9 +19,13 @@ const MiniCard: FC<IMiniCard> = ({ transition, title, href }) => {
       initial="hidden"
       animate="visible"
       transition={transition}
-      className="border-2 border-gray-800 rounded-lg transition-all duration-300 hover:shadow-3d cursor-pointer">
-      <Link href={href} target="_blank" className="p-2 flex items-center justify-between">
-        <p className="line-clamp-1 text-base">{title}</p>
+      className={clsx(
+        "border-2 border-gray-800 rounded-lg",
+        "cursor-pointer transition-all duration-300",
+        "hover:shadow-3d"
+      )}>
+      <Link href={href} target="_blank" className={clsx("p-2 flex items-center justify-between")}>
+        <p className={clsx("line-clamp-1 text-base")}>{title}</p>
         <BsArrowReturnRight />
       </Link>
     </motion.div>

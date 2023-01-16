@@ -51,8 +51,8 @@
     @apply fixed left-0 right-0 mx-auto z-10;
   }
 
-  .unblur {
-    animation: unBlur 1s linear;
+  .onBlur {
+    animation: onBlur 1s linear;
   }
 
   .title-mark {
@@ -79,23 +79,7 @@
     transform-origin: left;
   }
 
-  .sidebar {
-    @apply fixed top-0 w-[17.5rem] min-h-screen bg-gray-950 border-l 
-    border-gray-800 transition-all duration-[550ms] z-30 p-3;
-  }
-
-  .sidebarOverlay {
-    @apply w-[100vw] min-h-screen fixed top-0 left-0 bg-gray-900/20 
-    backdrop-blur z-20 transition-all duration-300;
-  }
-
-  .sidebarOverlayDouble {
-    @apply fixed top-0 bg-gray-950 w-[14.688rem] transition-all 
-    duration-[400ms] border-l border-gray-800 shadow-xl shadow-black/50
-    min-h-screen px-4 py-3 flex flex-col items-end justify-between;
-  }
-
-  @keyframes unBlur {
+  @keyframes onBlur {
     from {
       filter: blur(10px);
     }

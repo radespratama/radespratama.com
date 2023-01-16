@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import NextNProgress from "nextjs-progressbar";
 
-import * as gtag from "@/libs/utils";
+import * as gtag from "@/utils";
 
 import "@/styles/global.css";
 

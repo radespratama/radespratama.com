@@ -17,7 +17,7 @@ export default function SEO({ title, description, url }: SEOProps) {
       <meta name="keywords" content="Web Design, Portfolio Website, Portfolio Next JS" />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
       />
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />

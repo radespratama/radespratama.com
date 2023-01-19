@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { BsEnvelope, BsPin, BsDownload } from "react-icons/bs";
+import { RiMailLine, RiPushpin2Line, RiTelegramFill } from "react-icons/ri";
 
 import I from "@/components/Icon";
 
@@ -60,11 +60,11 @@ const ContactModule: React.FC = () => {
           <Link
             href="mailto:radespratamaa@gmail.com"
             className={clsx("contact-button", "hover:text-emerald-400")}>
-            <BsEnvelope className={clsx("text-2xl mr-2")} />
+            <RiMailLine className={clsx("text-2xl mr-2")} />
             radespratamaa@gmail.com
           </Link>
           <h4 className={clsx("contact-button")}>
-            <BsPin className={clsx("text-2xl mr-2")} />
+            <RiPushpin2Line className={clsx("text-2xl mr-2")} />
             Bali, Indonesia
           </h4>
         </motion.div>
@@ -73,10 +73,10 @@ const ContactModule: React.FC = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
-          href="https://tinyurl.com/sayhiforyou"
+          href="https://t.me/radespratama"
           className={clsx("intro-button")}>
-          <BsDownload className={clsx("text-xl mr-2")} />
-          Resume
+          <RiTelegramFill className={clsx("text-xl mr-1")} />
+          Telegram
         </motion.a>
       </motion.div>
     </section>

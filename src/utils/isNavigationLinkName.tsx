@@ -6,7 +6,8 @@ import {
   TbBrandTailwind,
   TbBrandVercel,
 } from "react-icons/tb";
-import { BsInstagram, BsLinkedin, BsFileEarmarkTextFill } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { RiTelegramFill } from "react-icons/ri";
 
 export const HeaderLinkName = [
   { id: 1, title: "Home", path: "/" },
@@ -18,9 +19,9 @@ export const NavigationBottomLinkName = [
   { id: 2, path: "https://linkedin.com/in/radespratama", title: "Linkedin", icon: <BsLinkedin /> },
   {
     id: 3,
-    path: "https://tinyurl.com/sayhiforyou",
-    title: "Resume",
-    icon: <BsFileEarmarkTextFill />,
+    path: "https://t.me/radespratama",
+    title: "Telegram",
+    icon: <RiTelegramFill />,
   },
 ];
 

@@ -44,7 +44,7 @@ const HomeModule: FC<{ project: [IMiniCard] }> = ({ project }) => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.5 }}
-          className={clsx("py-3 text-lg text-gray-500 select-none max-w-lg", "md:text-xl")}>
+          className={clsx("py-3 text-lg text-gray-500 select-none", "md:text-xl md:max-w-lg")}>
           <span className={clsx("text-white")}>from Bali, Indonesia.</span> A self-taught developer
           with an interest in Computer Science ⚡
         </motion.h5>

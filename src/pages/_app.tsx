@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    isLoading ? setTimeout(() => setIsLoading(false), 1200) : null;
+    isLoading ? setTimeout(() => setIsLoading(false), 1900) : null;
   }, [isLoading]);
 
   useEffect(() => {

@@ -56,7 +56,9 @@ const Header: FC<IHeaderProps> = ({ isHeader }) => {
               </Link>
               <button
                 onClick={() => setIsSidebar(!isSidebar)}
-                className={clsx("block p-2", "sm:hidden")}>
+                className={clsx("block p-2", "sm:hidden")}
+                type="button"
+                >
                 <TbMenu className={clsx("text-xl text-white")} />
               </button>
             </div>

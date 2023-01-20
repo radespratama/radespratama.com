@@ -4,20 +4,12 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import NextNProgress from "nextjs-progressbar";
 
-import Loading from "@/components/Loading";
-
 import * as gtag from "@/utils";
 
 import "@/styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    isLoading ? setTimeout(() => setIsLoading(false), 1900) : null;
-  }, [isLoading]);
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -59,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         height={2}
         showOnShallow
       />
-      {isLoading ? <Loading /> : <Component {...pageProps} />}
+      <Component {...pageProps} />
     </>
   );
 }

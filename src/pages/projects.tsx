@@ -1,12 +1,11 @@
 import type { NextPage, GetStaticProps } from "next";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
 import Intro from "@/modules/Projects";
-const ContentList = dynamic(() => import("@/modules/Projects/content.module"));
+import ContentList from "@/modules/Projects/content.module";
 
 import { IMiniCard } from "@/types/Response";
 import { queryFetchAllProject } from "@/libs/query";

@@ -1,29 +1,19 @@
 import { useEffect, useState } from "react";
 import type { NextPage, GetStaticProps } from "next";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-const Intro = dynamic(() => import("@/modules/Home"));
-const NavigationBottom = dynamic(() => import("@/components/Navigation/NavigationBottom"));
+import Intro from "@/modules/Home";
+import NavigationBottom from "@/components/Navigation/NavigationBottom";
 
 import { sanityClient } from "@/libs/config/sanity.config";
 import { queryFetchMiniCard } from "@/libs/query";
 import { IMiniCard } from "@/types/Response";
-import Loading from "@/components/Loading";
 
 const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
   const { asPath } = useRouter();
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    let timer = setTimeout(() => setIsLoading(false), 1500);
-
-    return () => clearTimeout(timer);
-  }, [isLoading]);
 
   return (
     <>
@@ -32,14 +22,10 @@ const Home: NextPage<{ project: [IMiniCard] }> = ({ project }) => {
         url={process.env.NEXT_PUBLIC_BASE_URL + asPath}
         description="Someone who calls himself a Software Developer is interested in front-end development and understands UI Design—which he is currently exploring with Open-source Software."
       />
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <AppLayout isHeader>
-          <Intro project={project} />
-          <NavigationBottom />
-        </AppLayout>
-      )}
+      <AppLayout isHeader>
+        <Intro project={project} />
+        <NavigationBottom />
+      </AppLayout>
     </>
   );
 };
